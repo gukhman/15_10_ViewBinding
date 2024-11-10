@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">15_10_ViewBinding</string>
+    <string name="toolbarTitle">Дизайнерский Dashboard</string>
+    <string name="exit">Выход</string>
+
+
+</resources>
