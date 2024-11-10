@@ -24,6 +24,8 @@ open class BaseActivity : AppCompatActivity() {
         if (needBackArrow) {
             // Настройка Action Bar с кнопкой "Назад"
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        } else {
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
         }
     }
 
@@ -46,10 +48,12 @@ open class BaseActivity : AppCompatActivity() {
                 }
                 true
             }
+
             R.id.action_exit -> {
                 finishAffinity()  // Закрыть все активности
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
