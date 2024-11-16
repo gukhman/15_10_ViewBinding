@@ -1,10 +1,12 @@
-package com.example.a15_10_viewbinding
+package com.example.a15_10_viewbinding.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.a15_10_viewbinding.BaseActivity
+import com.example.a15_10_viewbinding.R
 import com.example.a15_10_viewbinding.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {

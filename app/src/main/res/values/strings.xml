@@ -2,8 +2,23 @@
     <string name="app_name">15_10_ViewBinding</string>
     <string name="toolbarTitle">Дизайнерский Dashboard</string>
     <string name="exit">Выход</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_title">Привет!</string>
+    <string name="home_content">Добро пожаловать домой!\n\nЗдесь вы можете найти последние обновления и информацию о нашем приложении.\n\nИсследуйте функции и наслаждайтесь беспрепятственным опытом.\n\nОставайтесь с нами, чтобы узнать о новых захватывающих обновлениях!</string>
 
-
+    <string name="home">Home</string>
+    <string name="chat">Chat</string>
+    <string name="widgets">Widgets</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="chat_title">Чат с поддержкой</string>
+    <string name="chat_input_hint">Напишите нам</string>
+    <string name="chat_send">Отправить</string>
+    <string name="widgets_title">Доступные виджеты</string>
+    <string name="logout_title">Уже уходите?</string>
+    <string name="profileName_hint">Имя</string>
+    <string name="profileEmail_hint">Email</string>
+    <string name="darkMode">Включить темную тему</string>
 </resources>

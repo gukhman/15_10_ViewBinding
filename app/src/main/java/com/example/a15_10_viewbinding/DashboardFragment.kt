@@ -6,6 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.a15_10_viewbinding.databinding.FragmentDashboardBinding
+import com.example.a15_10_viewbinding.fragments.ChatFragment
+import com.example.a15_10_viewbinding.fragments.HomeFragment
+import com.example.a15_10_viewbinding.fragments.LogoutFragment
+import com.example.a15_10_viewbinding.fragments.ProfileFragment
+import com.example.a15_10_viewbinding.fragments.SettingsFragment
+import com.example.a15_10_viewbinding.fragments.WidgetsFragment
 
 class DashboardFragment : Fragment() {
 
@@ -23,8 +29,28 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cardViewProfile.setOnClickListener {
+        binding.buttonHome.setOnClickListener {
+            (activity as MainActivity).replaceFragment(HomeFragment())
+        }
+
+        binding.buttonChat.setOnClickListener {
+            (activity as MainActivity).replaceFragment(ChatFragment())
+        }
+
+        binding.buttonProfile.setOnClickListener {
             (activity as MainActivity).replaceFragment(ProfileFragment())
+        }
+
+        binding.buttonWidgets.setOnClickListener {
+            (activity as MainActivity).replaceFragment(WidgetsFragment())
+        }
+
+        binding.buttonSettings.setOnClickListener {
+            (activity as MainActivity).replaceFragment(SettingsFragment())
+        }
+
+        binding.buttonLogout.setOnClickListener {
+            (activity as MainActivity).replaceFragment(LogoutFragment())
         }
 
     }

@@ -10,11 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme._15_10_ViewBinding"
+        android:theme="@style/_15_10_ViewBinding"
         tools:targetApi="31">
-        <activity
-            android:name=".DashboardFragment"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

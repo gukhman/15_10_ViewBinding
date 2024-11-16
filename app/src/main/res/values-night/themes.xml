@@ -1,7 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme._15_10_ViewBinding" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <!-- Base application theme for dark mode -->
+    <style name="_15_10_ViewBinding.Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/lightBlueDark</item>
+        <item name="colorPrimaryDark">@color/darkBlueDark</item>
+        <item name="colorAccent">@color/lightPinkDark</item>
     </style>
+
+    <style name="ButtonStyle.Dark">
+        <item name="android:backgroundTint">@color/lightBlueDark</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/greyDark</item>
+    </style>
+
+    <style name="MyToolbarStyle.Dark" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/darkBlueDark</item>
+        <item name="android:paddingStart">@dimen/defPadding</item>
+        <item name="titleTextAppearance">@style/MyToolbarTitleText.Dark</item>
+    </style>
+
+    <!-- Toolbar title text style for dark mode -->
+    <style name="MyToolbarTitleText.Dark" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/darkGreyDark</item>
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
 </resources>

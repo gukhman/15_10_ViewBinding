@@ -3,6 +3,8 @@ package com.example.a15_10_viewbinding
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -12,8 +14,19 @@ import androidx.core.view.WindowInsetsCompat
 open class BaseActivity : AppCompatActivity() {
 
     private lateinit var toolbar: Toolbar
+    private lateinit var backButton: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val sharedPreferences = getSharedPreferences("app_preferences", MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
+
+        if (isDarkMode) {
+            setTheme(R.style._15_10_ViewBinding)
+        } else {
+            setTheme(R.style._15_10_ViewBinding)
+        }
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
     }
@@ -21,11 +34,17 @@ open class BaseActivity : AppCompatActivity() {
     fun setupToolbar(toolbarId: Int, needBackArrow: Boolean) {
         toolbar = findViewById(toolbarId)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        backButton = toolbar.findViewById(R.id.back_button)
+
         if (needBackArrow) {
-            // Настройка Action Bar с кнопкой "Назад"
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            backButton.visibility = View.VISIBLE
+            backButton.setOnClickListener {
+                onBackPressed()
+            }
         } else {
-            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            backButton.visibility = View.GONE
         }
     }
 
